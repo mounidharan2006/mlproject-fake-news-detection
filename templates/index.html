@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>AI Fake News SaaS</title>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 240px;
+    height: 100vh;
+    background: #111827;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    color: #38bdf8;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 12px 0;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.sidebar a:hover {
+    background: #1f2937;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Cards */
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    flex: 1;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.real { background: #16a34a; }
+.fake { background: #dc2626; }
+.total { background: #2563eb; }
+
+/* Input */
+textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Result */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    background: #1e293b;
+    border-radius: 12px;
+   
+}
+
+/* Meter */
+.meter {
+    height: 20px;
+    background: #334155;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: linear-gradient(90deg, #22c55e, #ef4444);
+    width: 0%;
+    transition: 0.5s;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sidebar">
+    <h2>FakeNews AI</h2>
+    <a href="/">🏠 Home</a>
+    <a href="/dashboard">📊 Dashboard</a>
+    <a href="/history">📜 History</a>
+    <a href="/admin">⚙ Admin</a>
+    <a href="/logout">🚪 Logout</a>
+</div>
+
+<div class="main">
+
+<h1>AI Fake News Detection SaaS 🚀</h1>
+
+<div class="cards">
+    <div class="card total">
+        <h3>Total</h3>
+        <p>{{ total }}</p>
+    </div>
+
+    <div class="card real">
+        <h3>Real</h3>
+        <p>{{ real }}</p>
+    </div>
+
+    <div class="card fake">
+        <h3>Fake</h3>
+        <p>{{ fake }}</p>
+    </div>
+</div>
+
+<br>
+
+<textarea id="news" placeholder="Enter news..."></textarea>
+<br>
+<button onclick="analyze()">Analyze AI 🔍</button>
+
+<div class="result">
+    <h2 id="result"></h2>
+    <p id="confidence"></p>
+
+    <h3>Fake News Score</h3>
+    <div class="meter">
+        <div class="fill" id="fill"></div>
+    </div>
+
+    <p id="keywords"></p>
+    <p id="highlightedText"></p>
+</div>
+
+<canvas id="chart" height="100"></canvas>
+
+</div>
+
+<script>
+async function analyze(){
+    let text=document.getElementById("news").value;
+
+    let res=await fetch("/predict",{
+        method:"POST",
+        headers:{"Content-Type":"application/x-www-form-urlencoded"},
+        body:"news="+encodeURIComponent(text)
+    });
+
+    let data=await res.json();
+
+    document.getElementById("result").innerText=data.prediction;
+    document.getElementById("confidence").innerText="Confidence: "+data.confidence+"%";
+    document.getElementById("keywords").innerText="Keywords: "+data.keywords.join(", ");
+    document.getElementById("highlightedText").innerHTML=data.highlighted;
+
+    // meter update
+    let score = data.fake_score;
+    document.getElementById("fill").style.width = score + "%";
+
+    updateChart(data.real_score, data.fake_score);
+}
+
+// Chart
+let chart;
+function updateChart(real,fake){
+    if(chart) chart.destroy();
+
+    let ctx=document.getElementById("chart");
+
+    chart=new Chart(ctx,{
+        type:'doughnut',
+        data:{
+            labels:['Real','Fake'],
+            datasets:[{
+                data:[real,fake]
+            }]
+        }
+    });
+}
+</script>
+
+</body>
+</html>

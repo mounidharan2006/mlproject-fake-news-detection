@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>History</h2>
+<table border="1">
+<tr><th>News</th><th>Prediction</th><th>Confidence</th></tr>
+{% for row in data %}
+<tr>
+<td>{{ row[0][:80] }}</td>
+<td>{{ row[1] }}</td>
+<td>{{ row[2] }}%</td>
+</tr>
+{% endfor %}
+</table>
+<a href="/">Back</a>
+</body>
+</html>

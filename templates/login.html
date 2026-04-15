@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<style>
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: rgba(255,255,255,0.1);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    width: 320px;
+    color: white;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #00c6ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #0072ff;
+}
+
+.error {
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.show-pass {
+    font-size: 12px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+    <h2>Login</h2>
+
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="error">{{ messages[0] }}</div>
+      {% endif %}
+    {% endwith %}
+
+    <form method="post">
+        <input name="username" placeholder="Username" required>
+
+        <input type="password" name="password" id="password" placeholder="Password" required>
+
+        <label class="show-pass">
+            <input type="checkbox" onclick="togglePassword()"> Show Password
+        </label>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <p><a href="/register">Create account</a></p>
+</div>
+
+<script>
+function togglePassword() {
+    let p = document.getElementById("password");
+    p.type = (p.type === "password") ? "text" : "password";
+}
+</script>
+
+</body>
+</html>

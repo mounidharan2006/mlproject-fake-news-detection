@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Dashboard</h2>
+<p>Total: {{ total }}</p>
+<p>Real: {{ real }}</p>
+<p>Fake: {{ fake }}</p>
+
+<h3>Recent</h3>
+{% for r in recent %}
+<p>{{ r[1] }} - {{ r[2] }}%</p>
+{% endfor %}
+
+<a href="/">Back</a>
+</body>
+</html>
+

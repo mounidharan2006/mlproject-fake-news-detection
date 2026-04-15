@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Admin</h2>
+
+<h3>Users</h3>
+{% for u in users %}
+<p>{{ u[0] }} <a href="/delete_user/{{ u[0] }}">Delete</a></p>
+{% endfor %}
+
+<h3>All Predictions</h3>
+{% for h in history %}
+<p>{{ h[0] }} - {{ h[2] }} - {{ h[3] }}%</p>
+{% endfor %}
+
+<a href="/">Back</a>
+</body>
+</html>
