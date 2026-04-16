@@ -138,7 +138,7 @@ How to Run the Project
 
 Step 1: Clone the repository
 
-git clone https://github.com/your-username/fake-news-ml-project.git
+git clone https://github.com/mounidharan2006/mlproject-fake-news-detection.git
 
 Step 2: Navigate to project folder
 
