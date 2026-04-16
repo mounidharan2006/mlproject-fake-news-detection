@@ -1,4 +1,4 @@
-Fake News Detection and Recommendation System
+<img width="974" height="88" alt="Screenshot 2026-04-16 114128" src="https://github.com/user-attachments/assets/d8b82941-f3ef-4f22-bf24-bdadf2cec885" />Fake News Detection and Recommendation System
  Project Overview
 
 In the digital era, the rapid spread of misinformation and fake news has become a major challenge. This project presents a comprehensive machine learning pipeline designed to detect fake news articles and recommend reliable, personalized news content to users.
@@ -157,13 +157,26 @@ or open Jupyter Notebook and run cells
 
  Project Structure
 
-project/
-│── data/
-│── notebooks/
-│── src/
-│── models/
-│── README.md
-│── requirements.txt
+MLPROJECT-FAKE NEWS DETECTION/
+├── models/
+│   ├── model.pkl            # Trained ML model file
+│   └── vectorizer.pkl       # TF-IDF or CountVectorizer for text processing
+├── static/
+│   ├── logo.png             # Project logo/assets
+│   ├── script.js            # Frontend logic and API calls
+│   └── style.css            # Custom UI styling
+├── templates/
+│   ├── admin.html           # Admin management panel
+│   ├── dashboard.html       # User results and analytics dashboard
+│   ├── history.html         # Past prediction records
+│   ├── index.html           # Main landing page / input form
+│   ├── login.html           # User authentication page
+│   └── register.html        # New user registration
+├── app.py                   # Main Flask application entry point
+├── README.md                # Project documentation
+├── report_utils.py          # Utility functions for generating reports
+└── users.db                 # SQLite database for user/history storage
+
 
 
 
