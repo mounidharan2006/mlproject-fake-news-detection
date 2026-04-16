@@ -1,4 +1,4 @@
-<img width="974" height="88" alt="Screenshot 2026-04-16 114128" src="https://github.com/user-attachments/assets/d8b82941-f3ef-4f22-bf24-bdadf2cec885" />Fake News Detection and Recommendation System
+Fake News Detection and Recommendation System
  Project Overview
 
 In the digital era, the rapid spread of misinformation and fake news has become a major challenge. This project presents a comprehensive machine learning pipeline designed to detect fake news articles and recommend reliable, personalized news content to users.
