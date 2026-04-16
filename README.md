@@ -1,14 +1,14 @@
-📰 Fake News Detection & Personalized Recommendation System
+Fake News Detection & Personalized Recommendation System
 
-📌 Project Overview
+ Project Overview
 
 In the digital era, the rapid spread of misinformation and fake news has become a major challenge. This project presents a comprehensive machine learning pipeline designed to detect fake news articles and recommend reliable, personalized news content to users.
 
 The system integrates data preprocessing, supervised and unsupervised learning techniques, ensemble methods, and basic deep learning models. Additionally, it provides explainable AI insights to understand model decisions.
 
----
 
-🎯 Objectives
+
+ Objectives
 
 - To classify news articles as Real or Fake using machine learning models
 - To analyze and cluster similar news articles
@@ -18,22 +18,21 @@ The system integrates data preprocessing, supervised and unsupervised learning t
 - To provide explainable insights into model predictions
 - To evaluate models using industry-standard performance metrics
 
----
 
-🧠 Key Features
 
-- ✅ Fake News Classification
-- ✅ Regression Analysis (engagement prediction)
-- ✅ Clustering of news articles
-- ✅ Dimensionality Reduction (PCA / t-SNE)
-- ✅ Ensemble Learning (Random Forest, Boosting)
-- ✅ Deep Learning Model (Neural Network / LSTM)
-- ✅ Personalized Recommendation System
-- ✅ Explainable AI (Feature Importance, SHAP/LIME)
+ Key Features
 
----
+-  Fake News Classification
+-  Regression Analysis (engagement prediction)
+-  Clustering of news articles
+-  Dimensionality Reduction (PCA / t-SNE)
+-  Ensemble Learning (Random Forest, Boosting)
+-  Deep Learning Model (Neural Network / LSTM)
+-  Personalized Recommendation System
+-  Explainable AI (Feature Importance, SHAP/LIME)
 
-🏗️ System Architecture
+
+ System Architecture
 
 1. Data Collection
 2. Data Preprocessing
@@ -43,9 +42,8 @@ The system integrates data preprocessing, supervised and unsupervised learning t
 6. Recommendation Engine
 7. Visualization & Explainability
 
----
 
-⚙️ Technologies Used
+ Technologies Used
 
 - Programming Language: Python
 - Libraries:
@@ -55,9 +53,8 @@ The system integrates data preprocessing, supervised and unsupervised learning t
   - TensorFlow / Keras
   - NLTK / spaCy
 
----
 
-📊 Dataset
+ Dataset
 
 The dataset consists of labeled news articles categorized as real or fake.
 
@@ -70,9 +67,9 @@ Attributes include:
 
 Note: Only a sample dataset is included in this repository due to size limitations.
 
----
 
-🔄 Workflow
+
+ Workflow
 
 1. Data Preprocessing
 
@@ -115,9 +112,9 @@ Note: Only a sample dataset is included in this repository due to size limitatio
 - Feature importance analysis
 - SHAP / LIME explanations
 
----
 
-📈 Model Evaluation Metrics
+
+ Model Evaluation Metrics
 
 - Accuracy
 - Precision
@@ -126,18 +123,18 @@ Note: Only a sample dataset is included in this repository due to size limitatio
 - Confusion Matrix
 - ROC-AUC Curve
 
----
 
-📊 Results
+
+ Results
 
 - Achieved high accuracy using ensemble models
 - Improved performance compared to individual models
 - Effective clustering of similar news topics
 - Personalized recommendations based on user interests
 
----
 
-🚀 How to Run the Project
+
+How to Run the Project
 
 Step 1: Clone the repository
 
@@ -157,9 +154,9 @@ python main.py
 
 or open Jupyter Notebook and run cells
 
----
 
-📁 Project Structure
+
+ Project Structure
 
 project/
 │── data/
@@ -169,39 +166,19 @@ project/
 │── README.md
 │── requirements.txt
 
----
 
-📸 Screenshots
 
-(Add graphs, confusion matrix, outputs here)
-
----
-
-🔮 Future Work
+ Future Work
 
 - Integration with real-time news APIs
 - Deployment as a web/mobile application
 - Multilingual fake news detection
 - Advanced deep learning models (BERT, Transformers)
 
----
 
 👤 Author
 
 Mounidharan R
 
----
 
-📜 License
-
-This project is for academic and educational purposes only.
-
----
-
-🙏 Acknowledgements
-
-- Open-source datasets
-- Machine learning community
-- Research papers and online resources
-
----
+ 
