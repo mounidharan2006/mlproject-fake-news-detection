@@ -157,27 +157,27 @@ or open Jupyter Notebook and run cells
 
  Project Structure
 
+ Project Structure
+```text
 MLPROJECT-FAKE NEWS DETECTION/
 ├── models/
-│   ├── model.pkl            # Trained ML model file
-│   └── vectorizer.pkl       # TF-IDF or CountVectorizer for text processing
+│   ├── model.pkl            # Trained ML model file [cite: 106, 255]
+│   └── vectorizer.pkl       # TF-IDF Vectorizer for text processing [cite: 156, 255]
 ├── static/
 │   ├── logo.png             # Project logo/assets
 │   ├── script.js            # Frontend logic and API calls
 │   └── style.css            # Custom UI styling
 ├── templates/
 │   ├── admin.html           # Admin management panel
-│   ├── dashboard.html       # User results and analytics dashboard
+│   ├── dashboard.html       # User results and analytics dashboard [cite: 89]
 │   ├── history.html         # Past prediction records
 │   ├── index.html           # Main landing page / input form
 │   ├── login.html           # User authentication page
 │   └── register.html        # New user registration
 ├── app.py                   # Main Flask application entry point
-├── README.md                # Project documentation
-├── report_utils.py          # Utility functions for generating reports
+├── README.md                # Project documentation [cite: 107]
+├── report_utils.py          # Utility functions for generating reports [cite: 14]
 └── users.db                 # SQLite database for user/history storage
-
-
 
 
  Future Work
