@@ -1,5 +1,4 @@
-Fake News Detection & Personalized Recommendation System
-
+Fake News Detection and Recommendation System
  Project Overview
 
 In the digital era, the rapid spread of misinformation and fake news has become a major challenge. This project presents a comprehensive machine learning pipeline designed to detect fake news articles and recommend reliable, personalized news content to users.
